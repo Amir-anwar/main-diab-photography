@@ -1,20 +1,18 @@
-html {
-  box-sizing: border-box;
-}
+// libraries
+@import 'libs/normalize';
+@import '../../node_modules/overlayscrollbars/css/OverlayScrollbars.min.css';
+@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss';
+@import '../../node_modules/lightbox2/dist/css/lightbox.min.css';
 
-* {
-  &,
-  &::before,
-  &::after {
-    box-sizing: inherit;
-  }
-}
+// my strucure
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/global';
 
-body {
-  text-align: center;
-}
+@import 'components/components';
 
-img {
-  display: block;
-  width: 700px;
-}
+@import 'layout/header';
+
+@import 'pages/home';
+
+@import 'layout/footer';

@@ -1,0 +1,275 @@
+// libraries
+@import 'libs/normalize';
+@import '../../node_modules/overlayscrollbars/css/OverlayScrollbars.min.css';
+
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/global';
+
+@import 'components/components';
+
+@import 'layout/header';
+
+.contact-hero {
+  align-items: center;
+
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  background: {
+    image: url(../images/contact.jpg);
+    position: -0% -12px;
+    size: 110vw;
+  }
+
+  @media #{$downSMDesktop} {
+    background: {
+      image: url(../images/contact.jpg);
+      position: 40% 50%;
+      size: cover;
+    }
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact__par {
+    color: #fff;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 18px;
+    letter-spacing: 0.015em;
+    line-height: 28px;
+    margin-left: 7rem;
+    width: 400px;
+
+    @media #{$downSMDesktop} {
+      font-size: 16px;
+      letter-spacing: 0.43px;
+      line-height: 21px;
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: auto;
+    }
+  }
+
+  .mask-contact {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    height: 350px;
+    justify-content: center;
+    margin-right: 7rem;
+    padding: 35px;
+    position: relative;
+    width: 350px;
+
+    @media #{$downSMDesktop} {
+      margin: 3rem 0;
+    }
+
+    .mask {
+      clip-path: polygon(
+        0% 0%,
+        0% 100%,
+        8% 100%,
+        8% 7%,
+        90% 7%,
+        91% 94%,
+        4% 94%,
+        8% 100%,
+        100% 100%,
+        100% 0%
+      );
+      filter: blur(22px);
+      height: 350px;
+      left: 50%;
+      mix-blend-mode: luminosity;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      // background-color: #bebebe;
+      background: {
+        image: url(../images/contact.jpg);
+        position: 76% 44%;
+        size: 110vw;
+      }
+    }
+
+    .mask__contact-info {
+      overflow: hidden;
+      text-align: center;
+
+      h2,
+      h3 {
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 2rem;
+      }
+
+      .hl {
+        background-color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+      }
+    }
+  }
+
+  .cta {
+    bottom: 4rem;
+    color: #fff;
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 14px;
+    left: 7rem;
+    letter-spacing: 0.142em;
+    line-height: 0px;
+    position: absolute;
+    text-transform: uppercase;
+
+    @media #{$downSMDesktop} {
+      bottom: 0;
+      left: 0;
+      position: relative;
+    }
+
+    i {
+      position: relative;
+      right: 3px;
+      top: 3px;
+
+      img {
+        animation: upAndDown 1s ease-in-out 0.3s infinite;
+        transform: rotate(90deg);
+        @include easeout;
+      }
+    }
+  }
+
+  .social-media-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 100px;
+
+    i {
+      display: inline-block;
+      height: 30px;
+      position: relative;
+      width: 30px;
+
+      a {
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes upAndDown {
+  0% {
+    transform: translateY(0) rotate(90deg);
+  }
+
+  25% {
+    transform: translateY(-5px) rotate(70deg);
+  }
+
+  50% {
+    transform: translateY(-2px) rotate(90deg);
+  }
+
+  75% {
+    transform: translateY(-7px) rotate(110deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+.form-container {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  text-align: center;
+
+  h2 {
+    font-size: 27px;
+    letter-spacing: 0.137em;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.264em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .btn {
+      align-self: center;
+      cursor: pointer;
+    }
+
+    .form-input__wrapper {
+      input,
+      textarea {
+        border: none;
+        border-bottom: 1px solid $primaryColor;
+        font-family: 'Sorts Mill Goudy', serif;
+        letter-spacing: 0.164em;
+        padding: 0.5rem;
+        text-align: center;
+        width: 100%;
+      }
+
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+
+      label {
+        display: block;
+        font-family: 'Sorts Mill Goudy', serif;
+      }
+
+      &:nth-of-type(1) {
+        flex-basis: 47%;
+        @media #{$downSMDesktop} {
+          flex-basis: 100%;
+          margin: 3rem 0;
+        }
+      }
+
+      &:nth-of-type(2) {
+        flex-basis: 47%;
+        @media #{$downSMDesktop} {
+          flex-basis: 100%;
+          margin: 1xzvfdsfsddrem 0;
+        }
+      }
+
+      &:nth-of-type(3) {
+        flex-basis: 100%;
+        margin-top: 30px;
+      }
+
+      &:nth-of-type(4) {
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
+@import 'layout/footer';

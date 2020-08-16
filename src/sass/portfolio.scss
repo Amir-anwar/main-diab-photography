@@ -1,0 +1,51 @@
+// libraries
+@import 'libs/normalize';
+@import '../../node_modules/overlayscrollbars/css/OverlayScrollbars.min.css';
+@import '../../node_modules/lightbox2/dist/css/lightbox.min.css';
+
+// my strucure
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/global';
+
+@import 'components/components';
+
+@import 'layout/header';
+
+.navbar--web {
+  color: #000;
+  position: relative;
+
+  .nav {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .menu-branding a img {
+    width: 300px;
+  }
+}
+
+.navbar-container .container .menu-btn .btn-line {
+  background-color: $darkColor;
+}
+
+.navbar-container {
+  position: relative;
+}
+
+.featured {
+  text-align: center;
+
+  .main-title {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+
+  .btn {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+  }
+}
+
+@import 'layout/footer';

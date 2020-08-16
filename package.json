@@ -4,8 +4,8 @@
   "description": "boilerplate for workin with parcel",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html --public-url ./",
+    "start": "parcel src/*.html --public-url ./ --open",
+    "build": "parcel build src/*.html --public-url ./",
     "clean": "rm -r dist/",
     "deploy": "gh-pages -d dist"
   },
@@ -48,6 +48,11 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "gh-pages": "^3.1.0"
+    "@glidejs/glide": "^3.4.1",
+    "gh-pages": "^3.1.0",
+    "jquery": "^3.5.1",
+    "lightbox2": "^2.11.3",
+    "overlayscrollbars": "^1.13.0",
+    "smooth-scrollbar": "^8.5.2"
   }
 }
