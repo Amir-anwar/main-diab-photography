@@ -9,71 +9,14 @@
 
         .glide__slide {
           .slide__image {
-            .bg-image {
-              background-size: cover;
-              height: 100vh;
-              width: 100vw;
+            height: 100vh;
+            width: 100vw;
 
-              &--1 {
-                background-image: url(../images/slider/slider-m-1.jpg);
-                background-position: center center;
-
-                @media #{$upSMDesktop} {
-                  background-image: url(../images/slider/slider-1.jpg);
-                  background-position: top center;
-                  background-size: 130vw;
-                }
-              }
-
-              &--2 {
-                background-image: url(../images/slider/slider-m-2.jpg);
-                background-position: center center;
-
-                @media #{$upSMDesktop} {
-                  background-image: url(../images/slider/slider-2.jpg);
-                }
-              }
-
-              &--3 {
-                background-image: url(../images/slider/slider-m-3.jpg);
-                background-position: center center;
-
-                @media #{$upSMDesktop} {
-                  background-image: url(../images/slider/slider-3.jpg);
-                }
-              }
-
-              &--4 {
-                background-image: url(../images/slider/slider-m-4.jpg);
-                background-position: center center;
-                @media (min-width: 992px) {
-                  background-image: url(../images/slider/slider-4.jpg);
-                }
-              }
-
-              &--5 {
-                background-image: url(../images/slider/slider-m-5.jpg);
-                background-position: center center;
-                @media (min-width: 992px) {
-                  background-image: url(../images/slider/slider-5.jpg);
-                }
-              }
-
-              &--6 {
-                background-image: url(../images/slider/slider-m-6.jpg);
-                background-position: center center;
-                @media (min-width: 992px) {
-                  background-image: url(../images/slider/slider-6.jpg);
-                }
-              }
-
-              &--7 {
-                background-image: url(../images/slider/slider-m-7.jpg);
-                background-position: center center;
-                @media (min-width: 992px) {
-                  background-image: url(../images/slider/slider-7.jpg);
-                }
-              }
+            img {
+              height: auto;
+              object-fit: cover;
+              object-position: top center;
+              width: 100%;
             }
           }
         }
