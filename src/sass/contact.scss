@@ -1,6 +1,5 @@
 // libraries
 @import 'libs/normalize';
-@import '../../node_modules/overlayscrollbars/css/OverlayScrollbars.min.css';
 
 @import 'helpers/variables';
 @import 'helpers/mixins';
@@ -71,18 +70,16 @@
     }
 
     .mask {
-      clip-path: polygon(
-        0% 0%,
-        0% 100%,
-        8% 100%,
-        8% 7%,
-        90% 7%,
-        91% 94%,
-        4% 94%,
-        8% 100%,
-        100% 100%,
-        100% 0%
-      );
+      clip-path: polygon(0% 0%,
+      0% 100%,
+      8% 100%,
+      8% 7%,
+      90% 7%,
+      91% 94%,
+      4% 94%,
+      8% 100%,
+      100% 100%,
+      100% 0%);
       filter: blur(22px);
       height: 350px;
       left: 50%;
