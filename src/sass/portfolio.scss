@@ -1,50 +1,60 @@
-// libraries
-@import 'libs/normalize';
-@import '../../node_modules/lightbox2/dist/css/lightbox.min.css';
+@charset "UTF-8";
 
-// my strucure
-@import 'helpers/variables';
-@import 'helpers/mixins';
-@import 'helpers/global';
+// 1. settings
+@import 
+  '1-settings/global';
 
-@import 'components/components';
+// 2. desing tokens
+@import 
+  './2-design-tokens/colors',
+  './2-design-tokens/fonts',
+  './2-design-tokens/media-queries',
+  './2-design-tokens/spacing',
+  './2-design-tokens/typography';
 
-@import 'layout/header';
+// 3. tools
+@import 
+  './3-tools/center',
+  './3-tools/ease-out';
 
-.navbar--web {
-  color: #000;
-  position: relative;
+// 4. generic
+@import 
+  './4-generic/normalize',
+  './4-generic/box-sizing',
+  './4-generic/font-face',
+  './4-generic/print',
+  './4-generic/overflow',
+  './4-generic/tap-highlight',
+  './4-generic/scroll-behavior',
+  './4-generic/text-align';
 
-  .nav {
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-  }
+// 5. Elements
+@import 
+  './5-elements/forms',
+  './5-elements/headings',
+  './5-elements/images',
+  './5-elements/links',
+  './5-elements/lists';
 
-  .menu-branding a img {
-    width: 300px;
-  }
-}
+// 6. Skeleton
+@import 
+  './6-skeleton/grid',
+  './6-skeleton/layouts',
+  './6-skeleton/featured-page';
 
-.navbar-container .container .menu-btn .btn-line {
-  background-color: $darkColor;
-}
+// 7. components 
+@import 
+  './7-components/headings',
+  './7-components/lines',
+  './7-components/btns',
+  './7-components/navbar',
+  './7-components/image-grid',
+  './7-components/footer';
 
-.navbar-container {
-  position: relative;
-}
+// 8. Utilities
+@import 
+  './8-utilities/states';
 
-.featured {
-  text-align: center;
-
-  .main-title {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-  }
-
-  .btn {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-  }
-}
-
-@import 'layout/footer';
+// Shame on U
+@import 
+  './shame-about';

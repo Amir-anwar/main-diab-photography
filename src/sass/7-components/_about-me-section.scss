@@ -1,0 +1,69 @@
+.about-me {
+  align-items: center;
+  background-color: $bgColor;
+  display: flex;
+  flex-flow: column wrap;
+  justify-items: center;
+  padding: $section-padding 0;
+  text-align: center;
+
+  .h1 {
+    margin-bottom: $section-padding - 1rem;
+  }
+
+  .h2 {
+    margin-bottom: $section-padding - 1rem;
+    margin-top: $section-padding - 1rem;
+  }
+
+  img {
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .btn {
+    margin-top: $section-padding - 2rem;
+  }
+
+  @media #{$upTaplet} {
+    .about-me__wrapper {
+      &:nth-of-type(2) {
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  @media #{$upSMDesktop} {
+    .about-me-container {
+      align-items: center;
+      display: flex;
+      flex-flow: row nowrap;
+
+      .about-me__wrapper {
+        flex: 1;
+
+        &:nth-of-type(2) {
+          padding-left: 1rem;
+          padding-right: 1rem;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+
+      .p {
+        font-size: 15px;
+        letter-spacing: 0.048rem;
+        line-height: 31px;
+      }
+
+      .hl {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

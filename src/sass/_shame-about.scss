@@ -1,0 +1,21 @@
+.navbar--web {
+  color: #000;
+  position: relative;
+
+  .nav {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  .menu-branding a img {
+    width: 300px;
+  }
+}
+
+.navbar-container .container .menu-btn .btn-line {
+  background-color: $darkColor;
+}
+
+.navbar-container {
+  position: relative;
+}

@@ -1,0 +1,13 @@
+.featured {
+  padding-bottom: $section-padding;
+  padding-top: $section-padding;
+  text-align: center;
+
+  .h2 {
+    margin-bottom: $section-padding - 1rem;
+  }
+
+  .btn {
+    margin-top: $section-padding - 1rem;
+  }
+}

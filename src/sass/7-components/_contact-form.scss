@@ -1,0 +1,79 @@
+.form-container {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  text-align: center;
+
+  h2 {
+    font-size: 27px;
+    letter-spacing: 0.137em;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  span {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.264em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .btn {
+      align-self: center;
+      cursor: pointer;
+    }
+
+    .form-input__wrapper {
+      input,
+      textarea {
+        border: none;
+        border-bottom: 1px solid $primaryColor;
+        font-family: 'Sorts Mill Goudy', serif;
+        letter-spacing: 0.164em;
+        padding: 0.5rem;
+        text-align: center;
+        width: 100%;
+      }
+
+      textarea {
+        height: 100px;
+        resize: none;
+      }
+
+      label {
+        display: block;
+        font-family: 'Sorts Mill Goudy', serif;
+      }
+
+      &:nth-of-type(1) {
+        flex-basis: 47%;
+        @media #{$downSMDesktop} {
+          flex-basis: 100%;
+          margin: 3rem 0;
+        }
+      }
+
+      &:nth-of-type(2) {
+        flex-basis: 47%;
+        @media #{$downSMDesktop} {
+          flex-basis: 100%;
+          margin: 1xzvfdsfsddrem 0;
+        }
+      }
+
+      &:nth-of-type(3) {
+        flex-basis: 100%;
+        margin-top: 30px;
+      }
+
+      &:nth-of-type(4) {
+        margin: 20px auto;
+      }
+    }
+  }
+}

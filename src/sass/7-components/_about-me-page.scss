@@ -1,0 +1,69 @@
+
+.about-me {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+
+  .main-title {
+    margin: 2rem;
+  }
+
+  .paragraph {
+    font-size: 14px;
+    letter-spacing: 0.072rem;
+    line-height: 28px;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    .wrapper {
+      flex-basis: 25%;
+
+      &:nth-of-type(2) {
+        flex-basis: 50%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  @media #{$downSMDesktop} {
+    &__container {
+      flex-flow: column wrap;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      .main-title {
+        font-size: 1.5rem;
+      }
+
+      .wrapper {
+        &:nth-of-type(1) {
+          order: 2;
+        }
+
+        &:nth-of-type(2) {
+          order: 1;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 2rem;
+    }
+  }
+}

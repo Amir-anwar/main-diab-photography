@@ -1,0 +1,30 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media #{$upTaplet} {
+    width: 750px;
+  }
+
+  @media #{$upSMDesktop} {
+    width: 970px;
+  }
+
+  @media #{$upLGDesktop} {
+    width: 1170px;
+  }
+}
+
+.hidden-sm {
+  @media (max-width: 991px) {
+    display: none;
+  }
+}
+
+.hidden-lg {
+  @media #{$upSMDesktop} {
+    display: none;
+  }
+}

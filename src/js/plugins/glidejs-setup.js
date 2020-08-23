@@ -1,3 +1,4 @@
+import '@glidejs/glide/src/assets/sass/glide.core.scss';
 import Glide from '@glidejs/glide';
 
 export default function setGilde() {

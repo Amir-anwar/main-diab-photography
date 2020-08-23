@@ -1,299 +1,59 @@
-// libraries
-@import 'libs/normalize';
+@charset "UTF-8";
 
-// my strucure
-@import 'helpers/variables';
-@import 'helpers/mixins';
-@import 'helpers/global';
+// 1. settings
+@import 
+  '1-settings/global';
 
-@import 'components/components';
+// 2. desing tokens
+@import 
+  './2-design-tokens/colors',
+  './2-design-tokens/fonts',
+  './2-design-tokens/media-queries',
+  './2-design-tokens/spacing',
+  './2-design-tokens/typography';
 
-@import 'layout/header';
+// 3. tools
+@import 
+  './3-tools/center',
+  './3-tools/ease-out';
 
-.navbar--web {
-  color: #000;
-  position: relative;
+// 4. generic
+@import 
+  './4-generic/normalize',
+  './4-generic/box-sizing',
+  './4-generic/font-face',
+  './4-generic/print',
+  './4-generic/overflow',
+  './4-generic/tap-highlight',
+  './4-generic/scroll-behavior',
+  './4-generic/text-align';
 
-  .nav {
-    padding-bottom: 0.5rem;
-    padding-top: 0.5rem;
-  }
+// 5. Elements
+@import 
+  './5-elements/forms',
+  './5-elements/headings',
+  './5-elements/images',
+  './5-elements/links',
+  './5-elements/lists';
 
-  .menu-branding a img {
-    width: 300px;
-  }
-}
+// 6. Skeleton
+@import 
+  './6-skeleton/grid',
+  './6-skeleton/layouts';
 
-.navbar-container .container .menu-btn .btn-line {
-  background-color: $darkColor;
-}
+// 7. components 
+@import 
+  './7-components/headings',
+  './7-components/lines',
+  './7-components/btns',
+  './7-components/navbar',
+  './7-components/plans',
+  './7-components/footer';
 
-.navbar-container {
-  position: relative;
-}
+// 8. Utilities
+@import 
+  './8-utilities/states';
 
-.hero {
-  background-color: $bgColor;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
-
-  .hero__container {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-
-    @media #{$downSMDesktop} {
-      flex-flow: column wrap;
-      justify-content: center;
-    }
-  }
-
-  .hero__text {
-    h1 {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 2.7rem;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 22px;
-      margin-bottom: 0.5rem;
-
-      &:not(:first-of-type) {
-        margin-top: 0.75rem;
-      }
-    }
-
-    .cta {
-      color: $primaryColor;
-      text-transform: uppercase;
-    }
-  }
-
-  .hero__img-container {
-    flex-basis: 50%;
-    height: 300px;
-
-    img {
-      border-radius: 20px;
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
-    }
-
-    @media #{$downSMDesktop} {
-      margin-top: 2rem;
-
-      img {
-        border-radius: 0;
-      }
-    }
-  }
-}
-
-.wedding-plans {
-  background-color: $bgColor;
-  padding-bottom: $section-padding;
-  padding-top: $section-padding;
-  text-align: center;
-
-  .offer {
-    background-color: darken($redColor, 15%);
-    color: #fff;
-    font-weight: bold;
-    margin-bottom: 4rem;
-    padding: 1rem;
-  }
-
-  .wedding-plans__table {
-    display: flex;
-    justify-content: space-between;
-
-    @media #{$downSMDesktop} {
-      flex-flow: column wrap;
-      justify-content: center;
-    }
-
-    .table__cell {
-      flex-basis: 30%;
-      text-align: left;
-
-      @media #{$downSMDesktop} {
-        flex-basis: 100%;
-        margin-bottom: 2rem;
-
-        &:nth-of-type(2) {
-          order: -1;
-        }
-      }
-
-      .cell__title {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 1.4rem;
-        font-weight: bold;
-      }
-
-      ul {
-        background-color: #fff;
-        border-radius: 9px;
-        height: 80%;
-        list-style: none;
-        margin-top: 20px;
-        padding: 1rem;
-        padding-left: 3rem;
-
-        @media #{$downSMDesktop} {
-          height: auto;
-          padding-top: 2.5rem;
-        }
-
-        li {
-          font-size: 0.9rem;
-          font-weight: bold;
-          margin-bottom: 1.5rem;
-
-          &::before {
-            color: black;
-            content: '\2022';
-            display: inline-block;
-            font-weight: bold;
-            margin-left: -1em;
-            width: 1em;
-          }
-        }
-
-        &.contrast-color {
-          background: #cc2b5e;
-          background: linear-gradient(to right, #753a88, #cc2b5e);
-
-          color: #fff;
-
-          li {
-            &::before {
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-.section-title {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2.1rem;
-  letter-spacing: 0.074em;
-  margin-bottom: $section-padding;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.extra-notes {
-  background-color: $bgColor;
-  padding: $section-padding 0;
-
-  @media #{$downSMDesktop} {
-    padding: 1rem 0;
-  }
-
-  .wrapper {
-    background-color: #fff;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 3rem;
-    width: 80%;
-
-    @media #{$downSMDesktop} {
-      padding-left: 10px;
-      padding-right: 10px;
-      width: 90%;
-    }
-  }
-
-  ul {
-    background-color: #fff;
-    border-radius: 9px;
-    height: 80%;
-    list-style: none;
-    margin-top: 20px;
-    padding: 1rem;
-    padding-left: 3rem;
-
-    li {
-      font-size: 0.9rem;
-      margin-bottom: 1.5rem;
-
-      &::before {
-        color: $primaryColor;
-        content: '\2022';
-        display: inline-block;
-        font-weight: bold;
-        margin-left: -1em;
-        width: 1em;
-      }
-    }
-  }
-
-  .ps {
-    color: #753a88;
-    display: block;
-    font-size: 0.8rem;
-    margin: auto;
-    text-align: center;
-  }
-}
-
-.printings {
-  background-color: #fff;
-  padding: $section-padding 0;
-
-  .container {
-    display: flex;
-    justify-content: space-around;
-
-    @media #{$downSMDesktop} {
-      flex-flow: column wrap;
-      justify-content: center;
-    }
-
-    .wrapper {
-      background-color: $bgColor;
-      padding: 3rem;
-
-      @media #{$downSMDesktop} {
-        border-radius: 10px;
-        margin-bottom: 2rem;
-        padding-bottom: 0;
-      }
-
-      ul {
-        border-radius: 9px;
-        height: 80%;
-        list-style: none;
-        margin-top: 20px;
-        padding: 1rem;
-        padding-left: 3rem;
-
-        li {
-          font-size: 0.9rem;
-          font-weight: bold;
-          margin-bottom: 1.5rem;
-
-          &::before {
-            color: $primaryColor;
-            content: '\2022';
-            display: inline-block;
-            font-weight: bold;
-            margin-left: -1em;
-            width: 1em;
-          }
-        }
-      }
-    }
-  }
-}
-
-@import 'layout/footer';
+// Shame on U
+@import 
+  './shame-about';

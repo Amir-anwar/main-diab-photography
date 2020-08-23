@@ -1,0 +1,15 @@
+// The second folder is for all styles regarding the visual vocabulary
+// of the site. At this level, we are still not generating any CSS output.
+// It is where we define variables for the typography, colors, spacing,
+// media-queries, or any other attributes which you will use throughout
+// the design. For these visual design attributes, the term design tokens
+// has taken hold. Those design tokens could even be coming from your design
+// system as a single source of truth.
+
+$primaryColor: #675b29;
+$redColor: #ea2027;
+$greyColor: #707070;
+$darkColor: #141414;
+$bgColor: #f2f2f2;
+$plansColor: #b514f9;
+$whiteColor: #e9e9e9;

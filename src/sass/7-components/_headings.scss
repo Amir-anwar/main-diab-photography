@@ -1,0 +1,57 @@
+.h1 {
+  font-size: $main-h;
+  letter-spacing: 4px;
+}
+
+.main-title {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: $main-h;
+  letter-spacing: 0.048em;
+  padding-bottom: 1rem;
+  position: relative;
+  text-transform: uppercase;
+
+  &::before {
+    background-color: $primaryColor;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 150px;
+  }
+
+  &::after {
+    background-color: $primaryColor;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%) rotate(30deg);
+    width: 30px;
+  }
+}
+
+.main-paragraph {
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 18px;
+  letter-spacing: 0.103em;
+  line-height: 25px;
+}
+
+.h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: $second-h;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: $par-size;
+  letter-spacing: 0.042rem;
+  line-height: 28px;
+}

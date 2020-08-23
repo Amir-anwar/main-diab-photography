@@ -1,17 +1,63 @@
-// libraries
-@import 'libs/normalize';
-@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss';
-@import '../../node_modules/lightbox2/dist/css/lightbox.min.css';
+@charset "UTF-8";
 
-// my strucure
-@import 'helpers/variables';
-@import 'helpers/mixins';
-@import 'helpers/global';
+// 1. settings
+@import 
+  '1-settings/global';
 
-@import 'components/components';
+// 2. desing tokens
+@import 
+  './2-design-tokens/colors',
+  './2-design-tokens/fonts',
+  './2-design-tokens/media-queries',
+  './2-design-tokens/spacing',
+  './2-design-tokens/typography';
 
-@import 'layout/header';
+// 3. tools
+@import 
+  './3-tools/center',
+  './3-tools/ease-out';
 
-@import 'pages/home';
+// 4. generic
+@import 
+  './4-generic/normalize',
+  './4-generic/box-sizing',
+  './4-generic/font-face',
+  './4-generic/print',
+  './4-generic/overflow',
+  './4-generic/tap-highlight',
+  './4-generic/scroll-behavior',
+  './4-generic/text-align';
 
-@import 'layout/footer';
+// 5. Elements
+@import 
+  './5-elements/forms',
+  './5-elements/headings',
+  './5-elements/images',
+  './5-elements/links',
+  './5-elements/lists';
+
+// 6. Skeleton
+@import 
+  './6-skeleton/grid',
+  './6-skeleton/layouts';
+
+// 7. components 
+@import 
+  './7-components/headings',
+  './7-components/lines',
+  './7-components/btns',
+  './7-components/navbar',
+  './7-components/hero',
+  './7-components/image-grid',
+  './7-components/slider',
+  './7-components/about-me-section',
+  './7-components/featured-section',
+  './7-components/footer';
+
+// 8. Utilities
+@import 
+  './8-utilities/states';
+
+// Shame on U
+@import 
+  './shame';
