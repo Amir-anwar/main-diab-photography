@@ -1,4 +1,4 @@
-// menu btn functionality
-import setMenu from './util/menubtn';
+// navbarComponent
+import navbar from './components/navbar';
 
-setMenu();
+navbar();

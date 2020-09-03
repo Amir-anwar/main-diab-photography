@@ -1,0 +1,4 @@
+portrait:   277.5 x 
+lanscape:   277.5 x 180
+square:     565   x   
+fullwidth:  1140  x 

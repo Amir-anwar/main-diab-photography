@@ -49,62 +49,78 @@
     <link rel="stylesheet" href="./sass/about.scss" />
   </head>
   <body>
-    <header class="hidden-lg navbar-container">
-      <div class="container">
-        <div class="menu-branding--out">
-          <a href="index.html">
-            <img src="images/branding/logo-black.png" alt="mina-logo" />
-          </a>
-        </div>
-        <div class="menu-btn">
-          <span class="btn-line"></span> <span class="btn-line"></span>
-          <span class="btn-line"></span>
+    <nav class="navbar navbar--save-postion">
+      <!-- Web navbar -->
+      <div class="navbar-web navbar-web--light">
+        <div class="navbar-web__container container">
+          <ul class="navbar-web__navlinks">
+            <li class="navbar-web__item">
+              <a class="navbar-web__link" href="./index.html">Home</a>
+            </li>
+            <li class="navbar-web__item">
+              <a class="navbar-web__link" href="./plans.html">Plans</a>
+            </li>
+            <li class="navbar-web__item">
+              <a class="navbar-web__link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+
+          <div class="navbar-web__logo">
+            <img
+              class="navbar-web__logo-image"
+              src="images/branding/logo-black.png"
+              alt="mina-logo"
+            />
+          </div>
+
+          <ul class="navbar-web__navlinks">
+            <li class="navbar-web__item  navbar-web__item--active">
+              <a class="navbar-web__link">About Me</a>
+            </li>
+            <li class="navbar-web__item">
+              <a class="navbar-web__link" href="./portfolio.html">Portfolio</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
-    <nav class="hidden-lg menu">
-      <ul class="menu-nav">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="portfolio.html" class="nav-link">portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">contact</a>
-        </li>
-        <li class="nav-item">
-          <a href="plans.html" class="nav-link">plans</a>
-        </li>
-      </ul>
-    </nav>
-    <div class="navbar--web hidden-sm">
-      <ul class="nav container">
-        <div class="wrapper">
-          <li class="nav-item">
-            <a href="about.html" class="nav-link">About Me</a>
-          </li>
-          <li class="nav-item">
-            <a href="portfolio.html" class="nav-link">portfolio</a>
-          </li>
-        </div>
-        <div class="wrapper">
-          <div class="menu-branding">
-            <a href="index.html">
-              <img src="images/branding/logo-black.png" alt="mina-logo" />
-            </a>
+
+      <!-- Mobile and tablet navbar -->
+      <div class="navbar-mobile navbar-mobile--light">
+        <div class="navbar-mobile__container container">
+          <div class="navbar-mobile__logo">
+            <img
+              class="navbar-web__logo-image"
+              src="images/branding/logo-black.png"
+              alt="mina-logo"
+            />
+          </div>
+
+          <div class="navbar-mobile__burger">
+            <div class="navbar-mobile__line"></div>
+            <div class="navbar-mobile__line"></div>
+            <div class="navbar-mobile__line"></div>
           </div>
         </div>
-        <div class="wrapper">
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link">contact</a>
+
+        <ul class="navbar-mobile__overlay-menu">
+          <li class="navbar-mobile__item">
+            <a href="./index.html" class="navbar-mobile__link">Home</a>
           </li>
-          <li class="nav-item">
-            <a href="plans.html" class="nav-link">plans</a>
+          <li class="navbar-mobile__item  navbar-mobile__link--active">
+            <a class="navbar-mobile__link">About me</a>
           </li>
-        </div>
-      </ul>
-    </div>
+          <li class="navbar-mobile__item">
+            <a href="./contact.html" class="navbar-mobile__link">Contact</a>
+          </li>
+          <li class="navbar-mobile__item">
+            <a href="./portfolio.html" class="navbar-mobile__link">Portfolio</a>
+          </li>
+          <li class="navbar-mobile__item">
+            <a href="./plans.html" class="navbar-mobile__link">plans</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div class="about-me">
       <div class="about-me__container">
         <div class="wrapper wrapper--img">

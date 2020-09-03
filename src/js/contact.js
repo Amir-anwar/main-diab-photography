@@ -1,6 +1,4 @@
-/* eslint-disable require-jsdoc */
+// navbarComponent
+import navbar from './components/navbar';
 
-// menu btn functionality
-import setMenu from './util/menubtn';
-
-setMenu();
+navbar();

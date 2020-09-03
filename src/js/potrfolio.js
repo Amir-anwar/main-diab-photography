@@ -1,7 +1,8 @@
-// menu btn functionality
-import setMenu from './util/menubtn';
+// navbarComponent
+import navbar from './components/navbar';
 // import light box
 import setLightbox from './plugins/lightbox-setup';
 
-setMenu();
+navbar();
+
 setLightbox();
